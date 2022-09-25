@@ -2,16 +2,11 @@
 
 A simple client-server application for banking system which can be used for checking balance, mini statement, crediting and debiting amount.
 
-## Installing / Getting started
 
-* Clone the repository by typing the following command in the shell.
-```shell
-git clone https://github.com/abhiyadav1323/banking.git
-```
 * Compile the server and client source files by following commands.
 ```shell
-gcc client.c client_customer.c client_police.c client_admin.c -o client
-gcc server.c server_customer.c server_police.c server_admin.c -o server
+gcc client.c client_helper.c  -o client
+gcc server.c server_helper.c  -o server
 ```
 * First start the server. To start the server you need to pass the port nummber as the argument. You can choose any number between 2000 and 65535. If this port is already in use, just use another port and you are good to go. The following command starts the server:
 ```shell
@@ -37,8 +32,8 @@ The police can see the available balance of all customers. He is allowed to view
 #### Customer
 ```shell
 Enter the credentials.
-Username: 101
-Password: prpcpf
+Username: miki
+Password: tiki
 Welcome Bank_Customer.
 Do u want to continue (y/n): y
 Operation to perform: balance
@@ -60,17 +55,17 @@ Do u want to continue (y/n): n
 #### Bank Admin
 ```shell
 Enter the credentials.
-Username: 111
-Password: snavpa
+Username: admin
+Password: admin
 Welcome Bank_Admin.
 Do u want to continue (y/n): y
-User ID of Customer: 101
+User ID of Customer: miki
 Transaction Type: credit
 Amount: 50
 Transaction successful.
 
 Do u want to continue (y/n): y
-User ID of Customer: 102
+User ID of Customer: nabati
 Transaction Type: debit
 Amount: 10
 Transaction successful.
@@ -81,17 +76,17 @@ Do u want to continue (y/n): n
 #### Police
 ```shell
 Enter the credentials.
-Username: 115
-Password: xvdxbd
+Username: police1
+Password: police1
 Welcome Police.
 Do u want to continue (y/n): y
 Operation to perform: balance
-User ID of Customer: 101
+User ID of Customer: aosenba
 BALANCE: 3936.687012
 
 Do u want to continue (y/n): y
 Operation to perform: mini_statement
-User ID of Customer: 103
+User ID of Customer: divya
 MINI STATEMENT:
 02-12-2016 credit 5000
 14-03-2017 credit 5545.454102
